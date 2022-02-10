@@ -1,0 +1,55 @@
+{
+	"name": "Black_Ant",
+	"plugin-id": "Sprite",
+	"sid": 430824938935712,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Rotate",
+			"name": "Rotate",
+			"sid": 513750979494997
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4299792,
+						"collisionPoly": {
+							"points": [
+								0.20000000000000007,
+								0.35200000000000015,
+								0.7599999999999998,
+								0.3320000000000001,
+								0.7519999999999998,
+								0.5599999999999996,
+								0.20000000000000007,
+								0.49999999999999967
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 937521761057958,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

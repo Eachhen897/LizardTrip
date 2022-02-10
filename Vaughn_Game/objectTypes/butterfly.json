@@ -1,0 +1,49 @@
+{
+	"name": "Butterfly",
+	"plugin-id": "Sprite",
+	"sid": 132261892281543,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 340,
+						"height": 320,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 160888,
+						"collisionPoly": {
+							"points": [
+								0.04117647058823529,
+								0.10624999999999997,
+								0.9176470588235297,
+								0.1374999999999998,
+								0.9117647058823533,
+								0.7562500000000003,
+								0.035294117647058816,
+								0.7687500000000007
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 347312151757389,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

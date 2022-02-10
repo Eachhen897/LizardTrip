@@ -1,0 +1,30 @@
+{
+	"name": "Event sheet 2",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 112440500701785,
+					"parameters": {
+						"key": 82
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 223838974986634,
+					"parameters": {
+						"layout": "Layout 1"
+					}
+				}
+			],
+			"sid": 679977711185097
+		}
+	],
+	"sid": 891564546925013
+}

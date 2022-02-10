@@ -1,0 +1,386 @@
+{
+	"name": "Event sheet 1",
+	"events": [
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "System",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 980406862910800,
+							"parameters": {
+								"key": 82
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 380140934308966
+						}
+					],
+					"sid": 394525704396213
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-tick",
+							"objectClass": "System",
+							"sid": 589014839644777
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 105513693849829,
+							"parameters": {
+								"text": "\"Health: \" &Lizard.Health"
+							}
+						}
+					],
+					"sid": 508083044989445
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 512385548526798,
+							"parameters": {
+								"interval-seconds": "5.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 998490785245950,
+							"parameters": {
+								"object-to-create": "Bugs",
+								"layer": "1",
+								"x": "floor(random(50,3450))",
+								"y": "floor(random(50,1010))",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 933980546984485
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 793041757731451
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Cave",
+							"sid": 658874969484109,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 389932608313212
+				}
+			],
+			"sid": 300977204188999
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Player",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Bullet",
+							"sid": 290468737430942,
+							"parameters": {
+								"object": "Lizard"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "shake",
+							"objectClass": "Lizard",
+							"sid": 736788574090261,
+							"behaviorType": "ScrollTo",
+							"parameters": {
+								"magnitude": "20",
+								"duration": "0.4",
+								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Lizard",
+							"sid": 265855240008602,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 877990843512571,
+							"parameters": {
+								"text": "\"Health: \" &Lizard.Health"
+							}
+						}
+					],
+					"sid": 739878490375243
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Lizard",
+							"sid": 349591031995508,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 175647515812265
+						}
+					],
+					"sid": 204153806986297
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Lizard",
+							"sid": 321838704993380,
+							"parameters": {
+								"object": "Bugs"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Bugs",
+							"sid": 631656894475263
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Lizard",
+							"sid": 647490113692170,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 660141090510653,
+							"parameters": {
+								"text": "\"Health: \" &Lizard.Health"
+							}
+						}
+					],
+					"sid": 885970366329962
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Lizard",
+							"sid": 503059498426716,
+							"parameters": {
+								"instance-variable": "Health",
+								"comparison": 5,
+								"value": "10"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Cave",
+							"sid": 933016028435668,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						},
+						{
+							"id": "set-animation-frame",
+							"objectClass": "Cave",
+							"sid": 158839942742393,
+							"parameters": {
+								"frame-number": "1"
+							}
+						}
+					],
+					"sid": 381535976846978
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Lizard",
+							"sid": 389415357101031,
+							"parameters": {
+								"object": "Cave"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 661791721626339,
+							"parameters": {
+								"layout": "Layout 2"
+							}
+						}
+					],
+					"sid": 999086737264825
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Lizard",
+							"sid": 183731723578630,
+							"parameters": {
+								"object": "Butterfly"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Lizard",
+							"sid": 901927092291429,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"speed": "600"
+							}
+						}
+					],
+					"sid": 419171243992451
+				}
+			],
+			"sid": 592564132183825
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Turret",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-enabled",
+							"objectClass": "Turret",
+							"sid": 979998142033441,
+							"behaviorType": "Turret"
+						}
+					],
+					"actions": [
+						{
+							"id": "acquire-target",
+							"objectClass": "Turret",
+							"sid": 323001818029062,
+							"behaviorType": "Turret",
+							"parameters": {
+								"target": "Lizard"
+							}
+						}
+					],
+					"sid": 132202405744197
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-target",
+							"objectClass": "Turret",
+							"sid": 985263791515674,
+							"behaviorType": "Turret"
+						}
+					],
+					"actions": [
+						{
+							"id": "set-rate-of-fire",
+							"objectClass": "Turret",
+							"sid": 939813417143235,
+							"behaviorType": "Turret",
+							"parameters": {
+								"rate-of-fire": "2"
+							}
+						}
+					],
+					"sid": 689347536296608
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-shoot",
+							"objectClass": "Turret",
+							"sid": 926774074045035,
+							"behaviorType": "Turret"
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Turret",
+							"sid": 541955444282848,
+							"parameters": {
+								"object": "Bullet",
+								"layer": "1",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 977371110574694
+				}
+			],
+			"sid": 658063589924641
+		}
+	],
+	"sid": 487839951263629
+}
