@@ -228,9 +228,9 @@
 						{
 							"id": "compare-instance-variable",
 							"objectClass": "Lizard",
-							"sid": 503059498426716,
+							"sid": 383657407957935,
 							"parameters": {
-								"instance-variable": "Health",
+								"instance-variable": "Score",
 								"comparison": 5,
 								"value": "10"
 							}
