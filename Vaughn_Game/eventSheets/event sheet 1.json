@@ -46,6 +46,14 @@
 							"parameters": {
 								"text": "\"Health: \" &Lizard.Health"
 							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text3",
+							"sid": 686854010717048,
+							"parameters": {
+								"text": "\"Score: \" &Lizard.Score"
+							}
 						}
 					],
 					"sid": 508083044989445
@@ -197,18 +205,18 @@
 						{
 							"id": "add-to-instvar",
 							"objectClass": "Lizard",
-							"sid": 647490113692170,
+							"sid": 458266421957704,
 							"parameters": {
-								"instance-variable": "Health",
+								"instance-variable": "Score",
 								"value": "1"
 							}
 						},
 						{
 							"id": "set-text",
-							"objectClass": "Text2",
-							"sid": 660141090510653,
+							"objectClass": "Text3",
+							"sid": 110232131701826,
 							"parameters": {
-								"text": "\"Health: \" &Lizard.Health"
+								"text": "\"Score: \" &Lizard.Score"
 							}
 						}
 					],

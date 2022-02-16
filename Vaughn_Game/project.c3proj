@@ -95,6 +95,14 @@
 			"bundled": false
 		},
 		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Anchor",
+			"author": "Scirra",
+			"version": "r276.2",
+			"bundled": false
+		},
+		{
 			"type": "effect",
 			"id": "brightness",
 			"name": "Brightness",
@@ -116,7 +124,8 @@
 			"Butterfly",
 			"Cave",
 			"Text",
-			"Text2"
+			"Text2",
+			"Text3"
 		],
 		"subfolders": []
 	},

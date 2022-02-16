@@ -9,6 +9,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 517304489506670
+		},
+		{
+			"name": "Score",
+			"type": "number",
+			"desc": "",
+			"sid": 727258460728817
 		}
 	],
 	"behaviorTypes": [

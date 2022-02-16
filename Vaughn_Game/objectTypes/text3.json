@@ -1,14 +1,14 @@
 {
-	"name": "Text2",
+	"name": "Text3",
 	"plugin-id": "Text",
-	"sid": 782390352322157,
+	"sid": 871419403930184,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Anchor",
 			"name": "Anchor",
-			"sid": 272855500675617
+			"sid": 901200276848632
 		}
 	],
 	"effectTypes": []
