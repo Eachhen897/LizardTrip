@@ -47,6 +47,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r283",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -125,7 +133,8 @@
 			"Cave",
 			"Text",
 			"Text2",
-			"Text3"
+			"Text3",
+			"Audio"
 		],
 		"subfolders": []
 	},
@@ -157,7 +166,13 @@
 			"subfolders": []
 		},
 		"sound": {
-			"items": [],
+			"items": [
+				{
+					"name": "ES_PREL Beat Upbeat - SFX Producer.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 828025242436347
+				}
+			],
 			"subfolders": []
 		},
 		"music": {

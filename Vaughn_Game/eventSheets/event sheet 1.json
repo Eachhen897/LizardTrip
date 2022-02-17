@@ -106,6 +106,30 @@
 						}
 					],
 					"sid": 389932608313212
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 231584174109112
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 542287443767981,
+							"parameters": {
+								"audio-file": "ES_PREL Beat Upbeat - SFX Producer",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 687262171887058
 				}
 			],
 			"sid": 300977204188999
