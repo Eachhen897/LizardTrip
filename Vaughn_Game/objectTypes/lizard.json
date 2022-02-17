@@ -11,10 +11,16 @@
 			"sid": 517304489506670
 		},
 		{
-			"name": "Score",
+			"name": "Bugs",
 			"type": "number",
 			"desc": "",
 			"sid": 727258460728817
+		},
+		{
+			"name": "Speed",
+			"type": "number",
+			"desc": "",
+			"sid": 604312282728435
 		}
 	],
 	"behaviorTypes": [
@@ -65,7 +71,173 @@
 					}
 				],
 				"sid": 515095235247274,
-				"name": "Animation 1",
+				"name": "Normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1260049,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 7913125,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 552332,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3954173,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5484108,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4242757,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 783471,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1292910,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8837428,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1935635,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 350,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6370521,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 920540961407596,
+				"name": "Invincibility frames",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6249573,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 900296422303452,
+				"name": "Ded",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

@@ -3,7 +3,14 @@
 	"plugin-id": "Sprite",
 	"sid": 746131019001350,
 	"isGlobal": false,
-	"instanceVariables": [],
+	"instanceVariables": [
+		{
+			"name": "FireRate",
+			"type": "number",
+			"desc": "",
+			"sid": 473899183376679
+		}
+	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Turret",
