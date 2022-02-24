@@ -9,7 +9,7 @@
 				{
 					"type": "Text",
 					"properties": {
-						"text": "Thanks for playing. Press R to go back to Prototype",
+						"text": "",
 						"enable-bbcode": true,
 						"font": "Arial",
 						"size": 12,

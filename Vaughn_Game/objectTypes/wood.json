@@ -1,7 +1,7 @@
 {
-	"name": "Grass",
+	"name": "Wood",
 	"plugin-id": "TiledBg",
-	"sid": 361143748767246,
+	"sid": 166623701522139,
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
@@ -14,7 +14,7 @@
 		"originalSource": "",
 		"exportFormat": "png",
 		"exportQuality": 0.8,
-		"imageSpriteId": 8970860,
+		"imageSpriteId": 6290793,
 		"useCollisionPoly": true
 	}
 }

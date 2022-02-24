@@ -5,6 +5,27 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 369982845161326
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text",
+					"sid": 808908781011706,
+					"parameters": {
+						"text": "\"Game Over. Your final score is \"& Score &\". Press 'R' to start over.\""
+					}
+				}
+			],
+			"sid": 499682324616048
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
 					"sid": 112440500701785,
@@ -14,6 +35,33 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 314792130157545,
+					"parameters": {
+						"variable": "Level",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 923949919887027,
+					"parameters": {
+						"variable": "Score",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 717372010975836,
+					"parameters": {
+						"variable": "Color",
+						"value": "0"
+					}
+				},
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",

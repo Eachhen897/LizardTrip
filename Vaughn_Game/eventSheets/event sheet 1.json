@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "Level",
 			"type": "number",
-			"initialValue": "0",
+			"initialValue": "1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -297,6 +297,45 @@
 						}
 					],
 					"sid": 446541118673542
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 519788637499179
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 471213579500966,
+							"parameters": {
+								"variable": "IsWin"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 380501696112633,
+							"parameters": {
+								"variable": "IsWin",
+								"value": "false"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 517400402916197,
+							"parameters": {
+								"variable": "Level",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 931042714194691
 				}
 			],
 			"sid": 300977204188999
@@ -475,9 +514,12 @@
 							}
 						},
 						{
-							"id": "restart-layout",
+							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 175647515812265
+							"sid": 870164182310684,
+							"parameters": {
+								"layout": "Layout 2"
+							}
 						}
 					],
 					"sid": 204153806986297,
@@ -495,6 +537,15 @@
 								"comparison": 0,
 								"value": "0"
 							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 231281169131123,
+							"parameters": {
+								"variable": "IsWin"
+							},
+							"isInverted": true
 						}
 					],
 					"actions": [
@@ -536,13 +587,15 @@
 							}
 						},
 						{
-							"id": "restart-layout",
+							"id": "go-to-layout",
 							"objectClass": "System",
-							"sid": 885590446346943
+							"sid": 623074064437602,
+							"parameters": {
+								"layout": "Layout 2"
+							}
 						}
 					],
-					"sid": 957087443881420,
-					"isOrBlock": true
+					"sid": 957087443881420
 				},
 				{
 					"eventType": "block",
@@ -886,6 +939,22 @@
 							"parameters": {
 								"text": "\"Ouch!\""
 							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 585497991521572,
+							"parameters": {
+								"seconds": "2.0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text7",
+							"sid": 953633335903258,
+							"parameters": {
+								"text": "\"\""
+							}
 						}
 					],
 					"sid": 791055226512570
@@ -919,6 +988,22 @@
 							"sid": 797931610438591,
 							"parameters": {
 								"text": "\"D'OH!\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 662407565034256,
+							"parameters": {
+								"seconds": "2.0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text7",
+							"sid": 818931099771814,
+							"parameters": {
+								"text": "\"\""
 							}
 						}
 					],
@@ -954,6 +1039,22 @@
 							"parameters": {
 								"text": "\"Yowie Kazowie!\""
 							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 920432334682279,
+							"parameters": {
+								"seconds": "2.0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text7",
+							"sid": 939788268602253,
+							"parameters": {
+								"text": "\"\""
+							}
 						}
 					],
 					"sid": 626217436028213
@@ -988,6 +1089,22 @@
 							"parameters": {
 								"text": "\"Zoinks!\""
 							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 531926760443417,
+							"parameters": {
+								"seconds": "2.0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text7",
+							"sid": 451842688257605,
+							"parameters": {
+								"text": "\"\""
+							}
 						}
 					],
 					"sid": 448317657143409
@@ -1021,6 +1138,22 @@
 							"sid": 996983075201579,
 							"parameters": {
 								"text": "\"*Roblox Oof*\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 845763639381082,
+							"parameters": {
+								"seconds": "2.0"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text7",
+							"sid": 804842368169034,
+							"parameters": {
+								"text": "\"\""
 							}
 						}
 					],
@@ -1136,21 +1269,37 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 666315874450568,
+							"sid": 428930093738044,
 							"parameters": {
 								"variable": "Color",
 								"comparison": 0,
-								"value": "1"
+								"value": "0"
 							}
 						}
 					],
 					"actions": [
 						{
-							"id": "set-default-color",
+							"id": "set-visible",
 							"objectClass": "Grass",
-							"sid": 528648448835573,
+							"sid": 888326171009815,
 							"parameters": {
-								"color": "rgbEx(255, 0, 255)"
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Metal",
+							"sid": 265343746808901,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Wood",
+							"sid": 521582467337255,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						}
 					],
@@ -1162,7 +1311,49 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 468954296758419,
+							"sid": 938631874477693,
+							"parameters": {
+								"variable": "Color",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Grass",
+							"sid": 116356534308241,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Metal",
+							"sid": 252952547937488,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Wood",
+							"sid": 728676006137032,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 622323861171958
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 313147024626877,
 							"parameters": {
 								"variable": "Color",
 								"comparison": 0,
@@ -1172,15 +1363,31 @@
 					],
 					"actions": [
 						{
-							"id": "set-default-color",
+							"id": "set-visible",
 							"objectClass": "Grass",
-							"sid": 748001637730633,
+							"sid": 388052476217614,
 							"parameters": {
-								"color": "rgbEx(255, 0, 0)"
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Metal",
+							"sid": 916383678642848,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Wood",
+							"sid": 316123143513721,
+							"parameters": {
+								"visibility": "visible"
 							}
 						}
 					],
-					"sid": 622323861171958
+					"sid": 625253319749327
 				}
 			],
 			"sid": 354516891219437
@@ -1215,15 +1422,6 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 296580190613420,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
 							"sid": 982446490706458,
 							"parameters": {
 								"variable": "BugsGotten",
@@ -1242,10 +1440,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 943573176585311,
+							"sid": 263279640083590,
 							"parameters": {
 								"variable": "SpawnRate",
-								"value": "5"
+								"value": "3"
 							}
 						},
 						{
@@ -1260,37 +1458,19 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Lizard",
-							"sid": 871189600224106,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "5"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 123390115365695,
+							"sid": 875783617153232,
 							"parameters": {
 								"instance-variable": "Speed",
-								"value": "300"
+								"value": "500"
 							}
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Turret",
-							"sid": 120921776427072,
+							"sid": 911855349256324,
 							"parameters": {
 								"instance-variable": "FireRate",
-								"value": "4"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 243160847663101,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level+1"
+								"value": "3"
 							}
 						}
 					],
@@ -1307,10 +1487,10 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 830108067103777,
+							"sid": 352924804275345,
 							"parameters": {
 								"variable": "Level",
-								"comparison": 0,
+								"comparison": 5,
 								"value": "4"
 							}
 						},
@@ -1326,15 +1506,6 @@
 						}
 					],
 					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 801514750143416,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
@@ -1356,10 +1527,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 833188720953772,
+							"sid": 902640399848531,
 							"parameters": {
 								"variable": "SpawnRate",
-								"value": "3"
+								"value": "2"
 							}
 						},
 						{
@@ -1374,37 +1545,19 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Lizard",
-							"sid": 127155093966478,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "5"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 882188934460732,
+							"sid": 774218078317060,
 							"parameters": {
 								"instance-variable": "Speed",
-								"value": "500"
+								"value": "700"
 							}
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Turret",
-							"sid": 814964557257776,
+							"sid": 646421519317756,
 							"parameters": {
 								"instance-variable": "FireRate",
-								"value": "3"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 455029030709517,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level"
+								"value": "2"
 							}
 						},
 						{
@@ -1452,15 +1605,6 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 704105040823259,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
 							"sid": 503574983553158,
 							"parameters": {
 								"variable": "BugsGotten",
@@ -1497,37 +1641,19 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Lizard",
-							"sid": 510643445583695,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "3"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 920989722720258,
+							"sid": 155607870645705,
 							"parameters": {
 								"instance-variable": "Speed",
-								"value": "700"
+								"value": "900"
 							}
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Turret",
-							"sid": 650305871797522,
+							"sid": 552701008585838,
 							"parameters": {
 								"instance-variable": "FireRate",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 821901550287980,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level"
+								"value": "1"
 							}
 						},
 						{
@@ -1575,15 +1701,6 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 739553754470910,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
 							"sid": 568703221284509,
 							"parameters": {
 								"variable": "BugsGotten",
@@ -1620,15 +1737,6 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Lizard",
-							"sid": 215525058547402,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "3"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
 							"sid": 460842826525737,
 							"parameters": {
 								"instance-variable": "Speed",
@@ -1642,15 +1750,6 @@
 							"parameters": {
 								"instance-variable": "FireRate",
 								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 837008842297944,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level"
 							}
 						},
 						{
@@ -1698,15 +1797,6 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 961079041950352,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
 							"sid": 552434101003649,
 							"parameters": {
 								"variable": "BugsGotten",
@@ -1743,19 +1833,10 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Lizard",
-							"sid": 124523361059638,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 889773147132997,
+							"sid": 851513402155533,
 							"parameters": {
 								"instance-variable": "Speed",
-								"value": "900"
+								"value": "1100"
 							}
 						},
 						{
@@ -1765,15 +1846,6 @@
 							"parameters": {
 								"instance-variable": "FireRate",
 								"value": "0.5"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 197580123392648,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level"
 							}
 						},
 						{
@@ -1821,15 +1893,6 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 607967507735168,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
 							"sid": 452272822018539,
 							"parameters": {
 								"variable": "BugsGotten",
@@ -1848,10 +1911,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 273104264484424,
+							"sid": 463510280166940,
 							"parameters": {
 								"variable": "SpawnRate",
-								"value": "1"
+								"value": "0.5"
 							}
 						},
 						{
@@ -1861,15 +1924,6 @@
 							"parameters": {
 								"variable": "BugsNeeded",
 								"value": "35"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 784464551694351,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "2"
 							}
 						},
 						{
@@ -1888,15 +1942,6 @@
 							"parameters": {
 								"instance-variable": "FireRate",
 								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 466167389068269,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level"
 							}
 						},
 						{
@@ -1944,15 +1989,6 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 170009233703757,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
 							"sid": 317421932308266,
 							"parameters": {
 								"variable": "BugsGotten",
@@ -1989,19 +2025,10 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Lizard",
-							"sid": 870415490842784,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 487463664403360,
+							"sid": 105999841803910,
 							"parameters": {
 								"instance-variable": "Speed",
-								"value": "1100"
+								"value": "1300"
 							}
 						},
 						{
@@ -2011,15 +2038,6 @@
 							"parameters": {
 								"instance-variable": "FireRate",
 								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 535268590524859,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level"
 							}
 						},
 						{
@@ -2067,15 +2085,6 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 421504177964399,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
 							"sid": 760045545943690,
 							"parameters": {
 								"variable": "BugsGotten",
@@ -2112,19 +2121,10 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Lizard",
-							"sid": 109377585169919,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 763247853367284,
+							"sid": 459879882908410,
 							"parameters": {
 								"instance-variable": "Speed",
-								"value": "1100"
+								"value": "1300"
 							}
 						},
 						{
@@ -2134,15 +2134,6 @@
 							"parameters": {
 								"instance-variable": "FireRate",
 								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 453357434418909,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level"
 							}
 						},
 						{
@@ -2180,15 +2171,6 @@
 						{
 							"id": "set-boolean-eventvar",
 							"objectClass": "System",
-							"sid": 813438581756176,
-							"parameters": {
-								"variable": "IsWin",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
 							"sid": 867419219194288,
 							"parameters": {
 								"variable": "BugsGotten",
@@ -2207,10 +2189,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 874538435016948,
+							"sid": 760146925651497,
 							"parameters": {
 								"variable": "SpawnRate",
-								"value": "0.5"
+								"value": "0.25"
 							}
 						},
 						{
@@ -2225,46 +2207,28 @@
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Lizard",
-							"sid": 324057147952588,
-							"parameters": {
-								"instance-variable": "Health",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 540723578496102,
+							"sid": 928222531739248,
 							"parameters": {
 								"instance-variable": "Speed",
-								"value": "1300"
+								"value": "1500"
 							}
 						},
 						{
 							"id": "set-instvar-value",
 							"objectClass": "Turret",
-							"sid": 123845897972644,
+							"sid": 504874240545036,
 							"parameters": {
 								"instance-variable": "FireRate",
-								"value": "0.25"
+								"value": "0.10"
 							}
 						},
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 282902077322255,
-							"parameters": {
-								"variable": "Level",
-								"value": "Level"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 484300573858063,
+							"sid": 125120178953510,
 							"parameters": {
 								"variable": "Color",
-								"value": "1"
+								"value": "2"
 							}
 						}
 					],

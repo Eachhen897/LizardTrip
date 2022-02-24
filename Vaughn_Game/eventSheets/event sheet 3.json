@@ -52,6 +52,14 @@
 					"parameters": {
 						"mode": "enabled"
 					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "Text8",
+					"sid": 756643749543554,
+					"parameters": {
+						"text": "\"aw heeeeeeeeeeeeell yeah...\""
+					}
 				}
 			],
 			"sid": 161335013281998
