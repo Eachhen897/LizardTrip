@@ -84,6 +84,30 @@
 				}
 			],
 			"sid": 569933072052730
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 133162328409300
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 293273228456179,
+					"parameters": {
+						"audio-file": "ES_Video Game Music Beat - SFX Producer",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 696082431054453
 		}
 	],
 	"sid": 743022044097739

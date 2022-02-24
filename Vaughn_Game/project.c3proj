@@ -199,6 +199,16 @@
 					"name": "ES_PREL Beat Upbeat - SFX Producer.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 828025242436347
+				},
+				{
+					"name": "ES_Video Game Music Beat - SFX Producer.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 635592172864349
+				},
+				{
+					"name": "ES_Caterpillar Bite 8 - SFX Producer.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 641378483871658
 				}
 			],
 			"subfolders": []
