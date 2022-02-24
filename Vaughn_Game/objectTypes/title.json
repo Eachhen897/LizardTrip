@@ -1,0 +1,20 @@
+{
+	"name": "Title",
+	"plugin-id": "Text",
+	"sid": 160619558657855,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 307168695225677
+		}
+	],
+	"effectTypes": [
+		{
+			"effectId": "water",
+			"name": "Water"
+		}
+	]
+}
