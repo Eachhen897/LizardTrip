@@ -883,6 +883,17 @@
 								"image-point": "0",
 								"create-hierarchy": false
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 972758926242663,
+							"parameters": {
+								"audio-file": "GunShotSnglShotIn_PE1097906",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 977371110574694
