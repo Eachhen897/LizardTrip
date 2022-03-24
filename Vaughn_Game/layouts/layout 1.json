@@ -191,7 +191,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
-								"default-controls": true,
+								"default-controls": false,
 								"enabled": true
 							}
 						},
@@ -240,7 +240,7 @@
 						"Turret": {
 							"properties": {
 								"range": 300,
-								"rate-of-fire": 1,
+								"rate-of-fire": 2,
 								"rotate": true,
 								"rotate-speed": 180,
 								"target-mode": "first-in-range",
@@ -393,7 +393,7 @@
 						"Turret": {
 							"properties": {
 								"range": 300,
-								"rate-of-fire": 1,
+								"rate-of-fire": 2,
 								"rotate": true,
 								"rotate-speed": 180,
 								"target-mode": "first-in-range",
@@ -438,7 +438,7 @@
 						"Turret": {
 							"properties": {
 								"range": 300,
-								"rate-of-fire": 1,
+								"rate-of-fire": 2,
 								"rotate": true,
 								"rotate-speed": 180,
 								"target-mode": "first-in-range",
@@ -483,7 +483,7 @@
 						"Turret": {
 							"properties": {
 								"range": 300,
-								"rate-of-fire": 1,
+								"rate-of-fire": 2,
 								"rotate": true,
 								"rotate-speed": 180,
 								"target-mode": "first-in-range",
@@ -528,7 +528,7 @@
 						"Turret": {
 							"properties": {
 								"range": 300,
-								"rate-of-fire": 1,
+								"rate-of-fire": 2,
 								"rotate": true,
 								"rotate-speed": 180,
 								"target-mode": "first-in-range",
@@ -601,9 +601,9 @@
 						"bold": true,
 						"italic": true,
 						"color": [
+							0.6,
+							0,
 							1,
-							0,
-							0,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -685,9 +685,9 @@
 						"bold": true,
 						"italic": true,
 						"color": [
+							0.6,
+							0,
 							1,
-							0,
-							0,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -769,9 +769,9 @@
 						"bold": true,
 						"italic": true,
 						"color": [
+							0.6,
+							0,
 							1,
-							0,
-							0,
 							1
 						],
 						"horizontal-alignment": "left",
@@ -826,8 +826,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 16,
-						"y": 949,
+						"x": 210,
+						"y": 38,
 						"width": 542,
 						"height": 42,
 						"originX": 0,

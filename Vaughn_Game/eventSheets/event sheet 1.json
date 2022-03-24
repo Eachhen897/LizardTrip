@@ -92,6 +92,56 @@
 			"sid": 584136002324119
 		},
 		{
+			"eventType": "variable",
+			"name": "Health",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 401166458242262
+		},
+		{
+			"eventType": "variable",
+			"name": "1UPA",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 918598057851208
+		},
+		{
+			"eventType": "variable",
+			"name": "1UPB",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 197357676858058
+		},
+		{
+			"eventType": "variable",
+			"name": "Powerdown",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 219597348443497
+		},
+		{
+			"eventType": "variable",
+			"name": "CoolDown",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 484748967384064
+		},
+		{
 			"eventType": "group",
 			"disabled": false,
 			"title": "System",
@@ -132,9 +182,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "Text2",
-							"sid": 105513693849829,
+							"sid": 735409531127168,
 							"parameters": {
-								"text": "\"Health: \" &Lizard.Health"
+								"text": "\"Health: \" & Health"
 							}
 						},
 						{
@@ -226,33 +276,46 @@
 							"parameters": {
 								"frame-number": "0"
 							}
-						}
-					],
-					"sid": 389932608313212
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 231584174109112
-						}
-					],
-					"actions": [
+						},
 						{
 							"id": "play",
 							"objectClass": "Audio",
-							"sid": 542287443767981,
+							"sid": 706357040242837,
 							"parameters": {
 								"audio-file": "ES_PREL Beat Upbeat - SFX Producer",
 								"loop": "not-looping",
 								"volume": "0",
 								"tag-optional": "\"\""
 							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 973457642024133,
+							"parameters": {
+								"variable": "CoolDown",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 189360875988752,
+							"parameters": {
+								"seconds": "5.0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 937339085079296,
+							"parameters": {
+								"variable": "CoolDown",
+								"value": "false"
+							}
 						}
 					],
-					"sid": 687262171887058
+					"sid": 389932608313212
 				},
 				{
 					"eventType": "block",
@@ -336,6 +399,39 @@
 						}
 					],
 					"sid": 931042714194691
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 384657523811819,
+							"parameters": {
+								"variable": "CoolDown"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 758020118164165,
+							"parameters": {
+								"seconds": "5.0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 496285111767904,
+							"parameters": {
+								"variable": "CoolDown",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 316393073715179
 				}
 			],
 			"sid": 300977204188999
@@ -411,11 +507,11 @@
 							}
 						},
 						{
-							"id": "subtract-from-instvar",
-							"objectClass": "Lizard",
-							"sid": 265855240008602,
+							"id": "subtract-from-eventvar",
+							"objectClass": "System",
+							"sid": 294505700311236,
 							"parameters": {
-								"instance-variable": "Health",
+								"variable": "Health",
 								"value": "1"
 							}
 						},
@@ -465,11 +561,11 @@
 					"eventType": "block",
 					"conditions": [
 						{
-							"id": "compare-instance-variable",
-							"objectClass": "Lizard",
-							"sid": 349591031995508,
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 978344636764144,
 							"parameters": {
-								"instance-variable": "Health",
+								"variable": "Health",
 								"comparison": 0,
 								"value": "0"
 							}
@@ -805,6 +901,50 @@
 						}
 					],
 					"sid": 419171243992451
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Lizard",
+							"sid": 497814391519484,
+							"parameters": {
+								"object": "Bugs"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 928577955005529,
+							"parameters": {
+								"variable": "CoolDown"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 576991519784450,
+							"parameters": {
+								"variable": "Powerdown",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 132922032922721,
+							"parameters": {
+								"variable": "Powerdown",
+								"value": "choose(1, 2)"
+							}
+						}
+					],
+					"sid": 934534359303227
 				}
 			],
 			"sid": 592564132183825
@@ -1279,6 +1419,15 @@
 							}
 						},
 						{
+							"id": "subtract-from-instvar",
+							"objectClass": "Turret",
+							"sid": 492907648892487,
+							"parameters": {
+								"instance-variable": "FireRate",
+								"value": "0.5"
+							}
+						},
+						{
 							"id": "restart-layout",
 							"objectClass": "System",
 							"sid": 793425416791734
@@ -1496,15 +1645,6 @@
 								"instance-variable": "Speed",
 								"value": "500"
 							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 911855349256324,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "3"
-							}
 						}
 					],
 					"sid": 579912741966423
@@ -1582,15 +1722,6 @@
 							"parameters": {
 								"instance-variable": "Speed",
 								"value": "700"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 646421519317756,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "2"
 							}
 						},
 						{
@@ -1681,15 +1812,6 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 552701008585838,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "1"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 691555469618493,
@@ -1774,15 +1896,6 @@
 							"parameters": {
 								"instance-variable": "Speed",
 								"value": "900"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 211865484040818,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "1"
 							}
 						},
 						{
@@ -1873,15 +1986,6 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 467729404928538,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "0.5"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 734373520743719,
@@ -1966,15 +2070,6 @@
 							"parameters": {
 								"instance-variable": "Speed",
 								"value": "1100"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 302091196992279,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "0.25"
 							}
 						},
 						{
@@ -2065,15 +2160,6 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 712626122958725,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "0.25"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 516223409237108,
@@ -2161,15 +2247,6 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 874986111168374,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "0.25"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 330478041826053,
@@ -2247,15 +2324,6 @@
 							}
 						},
 						{
-							"id": "set-instvar-value",
-							"objectClass": "Turret",
-							"sid": 504874240545036,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "0.10"
-							}
-						},
-						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 125120178953510,
@@ -2269,6 +2337,506 @@
 				}
 			],
 			"sid": 639971750616501
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "HeathGain",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 284618419360142,
+							"parameters": {
+								"variable": "Score",
+								"comparison": 5,
+								"value": "40000"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 948116790653593,
+							"parameters": {
+								"variable": "1UPA"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 591060809734995,
+							"parameters": {
+								"variable": "Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 551142711543085,
+							"parameters": {
+								"variable": "1UPA",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 763532515609057
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 389231456357751,
+							"parameters": {
+								"variable": "Score",
+								"comparison": 5,
+								"value": "100000"
+							}
+						},
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 440310547846722,
+							"parameters": {
+								"variable": "1UPB"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 979328448223657,
+							"parameters": {
+								"variable": "Health",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 107405583300376,
+							"parameters": {
+								"variable": "1UPB",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 122735118216355
+				}
+			],
+			"sid": 622617554013966
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Ice Physics",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 526025981575890,
+							"parameters": {
+								"variable": "Powerdown",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text7",
+							"sid": 467770420291193,
+							"parameters": {
+								"text": "\"Slippity-Doo-Dah!\""
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Lizard",
+							"sid": 190027533105233,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"acceleration": "300"
+							}
+						},
+						{
+							"id": "set-deceleration",
+							"objectClass": "Lizard",
+							"sid": 775511488282517,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"deceleration": "250"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 151024339545191,
+							"parameters": {
+								"seconds": "10.0"
+							}
+						},
+						{
+							"id": "set-acceleration",
+							"objectClass": "Lizard",
+							"sid": 533375840172464,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"acceleration": "600"
+							}
+						},
+						{
+							"id": "set-deceleration",
+							"objectClass": "Lizard",
+							"sid": 868097463058057,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"deceleration": "500"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 840224854623059,
+							"parameters": {
+								"variable": "Powerdown",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 285358665869156,
+							"parameters": {
+								"variable": "CoolDown",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 228134679524259
+				}
+			],
+			"sid": 488749640611086
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Controls (Reverse)",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 188185726143463,
+							"parameters": {
+								"variable": "Powerdown",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "Text7",
+							"sid": 217851738957844,
+							"parameters": {
+								"text": "\"!sdrawkcaB\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 337118709689007,
+							"parameters": {
+								"seconds": "10.0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 690633183674046,
+							"parameters": {
+								"variable": "Powerdown",
+								"value": "0"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 820967727287210,
+							"parameters": {
+								"variable": "CoolDown",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 162817859250295
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 393958975064899,
+							"parameters": {
+								"key": 37
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 457231893510125,
+							"parameters": {
+								"variable": "Powerdown",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Lizard",
+							"sid": 153090846935995,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 106419222931454
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 754615805652720,
+							"parameters": {
+								"key": 39
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 217998406832781,
+							"parameters": {
+								"variable": "Powerdown",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Lizard",
+							"sid": 870977224615615,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 635170494205005
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 245370597401358,
+							"parameters": {
+								"key": 38
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 166129644737095,
+							"parameters": {
+								"variable": "Powerdown",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Lizard",
+							"sid": 450407856719736,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 770992908904209
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 180817976450467,
+							"parameters": {
+								"key": 40
+							}
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 190793495222743,
+							"parameters": {
+								"variable": "Powerdown",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Lizard",
+							"sid": 202677838251030,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 570883252129851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 415974765146353,
+							"parameters": {
+								"key": 38
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Lizard",
+							"sid": 486159522116074,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "up"
+							}
+						}
+					],
+					"sid": 703407688258698
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 384764761305317,
+							"parameters": {
+								"key": 40
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Lizard",
+							"sid": 175994571352054,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "down"
+							}
+						}
+					],
+					"sid": 197975943369551
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 272541604326249,
+							"parameters": {
+								"key": 37
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Lizard",
+							"sid": 596535982807180,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "left"
+							}
+						}
+					],
+					"sid": 413927513302615
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "key-is-down",
+							"objectClass": "Keyboard",
+							"sid": 191747508419419,
+							"parameters": {
+								"key": 39
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "simulate-control",
+							"objectClass": "Lizard",
+							"sid": 938032267191087,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"control": "right"
+							}
+						}
+					],
+					"sid": 941451737406150
+				}
+			],
+			"sid": 251843894967996
 		}
 	],
 	"sid": 487839951263629
