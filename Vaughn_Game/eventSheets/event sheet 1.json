@@ -253,7 +253,8 @@
 								"layer": "1",
 								"x": "floor(random(50,3450))",
 								"y": "floor(random(50,1010))",
-								"create-hierarchy": false
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						}
 					],
@@ -945,6 +946,194 @@
 						}
 					],
 					"sid": 934534359303227
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Lizard",
+							"sid": 689029751183347,
+							"parameters": {
+								"object": "Beetle"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Beetle",
+							"sid": 481652321977866
+						},
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Lizard",
+							"sid": 906362961081498,
+							"parameters": {
+								"instance-variable": "Bugs",
+								"value": "1"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 137054271678612,
+							"parameters": {
+								"variable": "Score",
+								"value": "300"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Lizard",
+							"sid": 308677174052902,
+							"parameters": {
+								"collisions": "disabled"
+							}
+						},
+						{
+							"id": "set-opacity",
+							"objectClass": "Lizard",
+							"sid": 641973817674962,
+							"parameters": {
+								"opacity": "80"
+							}
+						}
+					],
+					"sid": 420412723237471
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-time",
+							"objectClass": "System",
+							"sid": 745048211955068,
+							"parameters": {
+								"comparison": 4,
+								"time-seconds": "10.0"
+							}
+						},
+						{
+							"id": "compare-opacity",
+							"objectClass": "Lizard",
+							"sid": 670041552858665,
+							"parameters": {
+								"comparison": 0,
+								"opacity": "80"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-opacity",
+							"objectClass": "Lizard",
+							"sid": 591503566155642,
+							"parameters": {
+								"opacity": "100"
+							}
+						},
+						{
+							"id": "set-collisions-enabled",
+							"objectClass": "Lizard",
+							"sid": 400823000630820,
+							"parameters": {
+								"collisions": "enabled"
+							}
+						}
+					],
+					"sid": 558135453635887
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Lizard",
+							"sid": 832269297286455,
+							"parameters": {
+								"object": "Spider"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Spider",
+							"sid": 872294815784132
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Lizard",
+							"sid": 381020400246329,
+							"parameters": {
+								"instance-variable": "ShootOn",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 406745326548390
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 666002407686916,
+							"parameters": {
+								"key": 32
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "Lizard",
+							"sid": 743652138214821,
+							"parameters": {
+								"instance-variable": "ShootOn"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Lizard",
+							"sid": 440493289918910,
+							"parameters": {
+								"object": "PlayerBullet",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 699285793466275
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-time",
+							"objectClass": "System",
+							"sid": 879234545738069,
+							"parameters": {
+								"comparison": 4,
+								"time-seconds": "10.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Lizard",
+							"sid": 842155245225163,
+							"parameters": {
+								"instance-variable": "ShootOn",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 373985906298511
 				}
 			],
 			"sid": 592564132183825
@@ -1037,6 +1226,57 @@
 						}
 					],
 					"sid": 977371110574694
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "PlayerBullet",
+							"sid": 532146683211068,
+							"parameters": {
+								"object": "Turret"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Turret",
+							"sid": 682484112365053,
+							"behaviorType": "Turret",
+							"parameters": {
+								"state": "disabled"
+							}
+						}
+					],
+					"sid": 204192679909114
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-time",
+							"objectClass": "System",
+							"sid": 206136567654937,
+							"parameters": {
+								"comparison": 0,
+								"time-seconds": "5.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-enabled",
+							"objectClass": "Turret",
+							"sid": 409250988118558,
+							"behaviorType": "Turret",
+							"parameters": {
+								"state": "enabled"
+							}
+						}
+					],
+					"sid": 681189381890755
 				}
 			],
 			"sid": 658063589924641

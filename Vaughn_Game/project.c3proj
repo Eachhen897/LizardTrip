@@ -111,6 +111,14 @@
 			"bundled": false
 		},
 		{
+			"type": "behavior",
+			"id": "Sin",
+			"name": "Sine",
+			"author": "Scirra",
+			"version": "r287",
+			"bundled": false
+		},
+		{
 			"type": "effect",
 			"id": "water",
 			"name": "Water",
@@ -122,6 +130,14 @@
 			"type": "effect",
 			"id": "bulge",
 			"name": "Bulge",
+			"author": "Brad Larson",
+			"version": "r287",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "swirl",
+			"name": "Swirl",
 			"author": "Brad Larson",
 			"version": "r287",
 			"bundled": false
@@ -160,7 +176,10 @@
 			"Button",
 			"Metal",
 			"Wood",
-			"Text8"
+			"Text8",
+			"Beetle",
+			"Spider",
+			"PlayerBullet"
 		],
 		"subfolders": []
 	},

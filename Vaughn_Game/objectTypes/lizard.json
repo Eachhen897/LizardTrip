@@ -21,6 +21,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 604312282728435
+		},
+		{
+			"name": "ShootOn",
+			"type": "boolean",
+			"desc": "",
+			"sid": 778231496318190
 		}
 	],
 	"behaviorTypes": [

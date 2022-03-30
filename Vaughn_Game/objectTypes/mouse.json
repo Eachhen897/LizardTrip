@@ -5,6 +5,17 @@
 	"singleglobal-inst": {
 		"type": "Mouse",
 		"properties": {},
-		"uid": 6
+		"uid": 6,
+		"template": {
+			"mode": "none",
+			"templateName": "",
+			"sourceTemplateName": "",
+			"components": [
+				{
+					"id": "plugin",
+					"component": "[{\"key\":\"plugin\",\"state\":\"[]\"}]"
+				}
+			]
+		}
 	}
 }

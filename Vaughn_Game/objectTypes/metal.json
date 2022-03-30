@@ -5,7 +5,12 @@
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "swirl",
+			"name": "Swirl"
+		}
+	],
 	"image": {
 		"width": 250,
 		"height": 250,

@@ -113,7 +113,8 @@
 					"instanceVariables": {
 						"Health": 5,
 						"Bugs": 0,
-						"Speed": 300
+						"Speed": 300,
+						"ShootOn": false
 					},
 					"behaviors": {
 						"8Direction": {
@@ -149,7 +150,7 @@
 							},
 							{
 								"id": "instance-variable",
-								"component": "[{\"key\":\"instance-variable\",\"state\":\"[{\\\"iv\\\":\\\"Health\\\",\\\"state\\\":true},{\\\"iv\\\":\\\"Bugs\\\",\\\"state\\\":true},{\\\"iv\\\":\\\"Speed\\\",\\\"state\\\":true}]\"}]"
+								"component": "[{\"key\":\"instance-variable\",\"state\":\"[{\\\"iv\\\":\\\"Health\\\",\\\"state\\\":true},{\\\"iv\\\":\\\"Bugs\\\",\\\"state\\\":true},{\\\"iv\\\":\\\"Speed\\\",\\\"state\\\":true},{\\\"iv\\\":\\\"ShootOn\\\",\\\"state\\\":true}]\"}]"
 							},
 							{
 								"id": "behavior",
