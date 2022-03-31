@@ -187,7 +187,8 @@
 			"Text8",
 			"Beetle",
 			"Spider",
-			"PlayerBullet"
+			"PlayerBullet",
+			"Text9"
 		],
 		"subfolders": []
 	},

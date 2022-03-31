@@ -14,9 +14,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "Text",
-					"sid": 808908781011706,
+					"sid": 461502884714024,
 					"parameters": {
-						"text": "\"Game Over. Your final score is \"& Score &\". Press 'R' to start over.\""
+						"text": "\"Game Over. Your final score is \"& Score &\". Remember kids, don't do drugs (Unless their legal, in which case, have fun!) Press 'R' to start over.\""
 					}
 				}
 			],
@@ -65,9 +65,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 223838974986634,
+					"sid": 507371059806744,
 					"parameters": {
-						"layout": "Layout 1"
+						"layout": "Layout 0"
 					}
 				}
 			],
