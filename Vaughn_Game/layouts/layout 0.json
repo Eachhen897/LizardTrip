@@ -137,6 +137,9 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -154,7 +157,7 @@
 							},
 							{
 								"id": "behavior",
-								"component": "[{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"BoundToLayout\",\"state\":\"[[\\\"bound-by\\\",true]]\"},{\"key\":\"ScrollTo\",\"state\":\"[[\\\"enabled\\\",true]]\"}]"
+								"component": "[{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"BoundToLayout\",\"state\":\"[[\\\"bound-by\\\",true]]\"},{\"key\":\"ScrollTo\",\"state\":\"[[\\\"enabled\\\",true]]\"},{\"key\":\"Timer\",\"state\":\"[]\"}]"
 							},
 							{
 								"id": "effect",

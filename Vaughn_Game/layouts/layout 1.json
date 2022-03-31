@@ -112,7 +112,7 @@
 					"effects": {
 						"Swirl": {
 							"parameters": {
-								"radius": 0.5,
+								"radius": 0.1,
 								"angle": 1
 							}
 						}
@@ -323,7 +323,7 @@
 								"deceleration": 500,
 								"directions": "dir-8",
 								"set-angle": "smooth",
-								"default-controls": false,
+								"default-controls": true,
 								"enabled": true
 							}
 						},
@@ -336,6 +336,9 @@
 							"properties": {
 								"enabled": true
 							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -353,7 +356,7 @@
 							},
 							{
 								"id": "behavior",
-								"component": "[{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"BoundToLayout\",\"state\":\"[[\\\"bound-by\\\",true]]\"},{\"key\":\"ScrollTo\",\"state\":\"[[\\\"enabled\\\",true]]\"}]"
+								"component": "[{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"BoundToLayout\",\"state\":\"[[\\\"bound-by\\\",true]]\"},{\"key\":\"ScrollTo\",\"state\":\"[[\\\"enabled\\\",true]]\"},{\"key\":\"Timer\",\"state\":\"[]\"}]"
 							},
 							{
 								"id": "effect",
@@ -408,6 +411,20 @@
 								"use-collision-cells": true,
 								"enabled": true
 							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": false
+							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -425,7 +442,7 @@
 							},
 							{
 								"id": "behavior",
-								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"}]"
+								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"Timer\",\"state\":\"[]\"}]"
 							},
 							{
 								"id": "effect",
@@ -669,6 +686,20 @@
 								"use-collision-cells": true,
 								"enabled": true
 							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": false
+							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -686,7 +717,7 @@
 							},
 							{
 								"id": "behavior",
-								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"}]"
+								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"Timer\",\"state\":\"[]\"}]"
 							},
 							{
 								"id": "effect",
@@ -741,6 +772,20 @@
 								"use-collision-cells": true,
 								"enabled": true
 							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": false
+							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -758,7 +803,7 @@
 							},
 							{
 								"id": "behavior",
-								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"}]"
+								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"Timer\",\"state\":\"[]\"}]"
 							},
 							{
 								"id": "effect",
@@ -813,6 +858,20 @@
 								"use-collision-cells": true,
 								"enabled": true
 							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": false
+							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -830,7 +889,7 @@
 							},
 							{
 								"id": "behavior",
-								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"}]"
+								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"Timer\",\"state\":\"[]\"}]"
 							},
 							{
 								"id": "effect",
@@ -885,6 +944,20 @@
 								"use-collision-cells": true,
 								"enabled": true
 							}
+						},
+						"8Direction": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 500,
+								"directions": "dir-8",
+								"set-angle": "smooth",
+								"default-controls": false,
+								"enabled": false
+							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"template": {
@@ -902,7 +975,7 @@
 							},
 							{
 								"id": "behavior",
-								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"}]"
+								"component": "[{\"key\":\"Turret\",\"state\":\"[[\\\"range\\\",true],[\\\"rate-of-fire\\\",true],[\\\"rotate\\\",true],[\\\"rotate-speed\\\",true],[\\\"target-mode\\\",true],[\\\"predictive-aim\\\",true],[\\\"projectile-speed\\\",true],[\\\"use-collision-cells\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"8Direction\",\"state\":\"[[\\\"max-speed\\\",true],[\\\"acceleration\\\",true],[\\\"deceleration\\\",true],[\\\"directions\\\",true],[\\\"set-angle\\\",true],[\\\"default-controls\\\",true],[\\\"enabled\\\",true]]\"},{\"key\":\"Timer\",\"state\":\"[]\"}]"
 							},
 							{
 								"id": "effect",
@@ -1284,7 +1357,7 @@
 					"world": {
 						"x": 6,
 						"y": 61,
-						"width": 219,
+						"width": 756,
 						"height": 42,
 						"originX": 0,
 						"originY": 0,
@@ -1354,7 +1427,7 @@
 						"x": 586,
 						"y": 67,
 						"width": 200,
-						"height": 43,
+						"height": 753,
 						"originX": 0,
 						"originY": 0,
 						"color": [
