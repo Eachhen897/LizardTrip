@@ -5,7 +5,12 @@
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "pulse",
+			"name": "Pulse"
+		}
+	],
 	"image": {
 		"width": 250,
 		"height": 250,

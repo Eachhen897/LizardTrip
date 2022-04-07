@@ -53,7 +53,7 @@
 						"x": -79,
 						"y": -67,
 						"width": 3739.33826115641,
-						"height": 1237.3382611564105,
+						"height": 4191.33826115641,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -112,16 +112,16 @@
 					"effects": {
 						"Swirl": {
 							"parameters": {
-								"radius": 0.1,
-								"angle": 1
+								"radius": 0.5,
+								"angle": 0.5
 							}
 						}
 					},
 					"world": {
-						"x": -83,
-						"y": -240,
+						"x": -61,
+						"y": -517,
 						"width": 3739.33826115641,
-						"height": 2346.33826115641,
+						"height": 4552.33826115641,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -196,7 +196,7 @@
 						"x": -58,
 						"y": -143,
 						"width": 3689,
-						"height": 1641,
+						"height": 4092,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -244,7 +244,7 @@
 							},
 							{
 								"id": "effect",
-								"component": "[]"
+								"component": "[{\"key\":\"WarpRadial\",\"state\":\"[[\\\"frequency\\\",true],[\\\"amplitude\\\",true],[\\\"speed\\\",true]]\"}]"
 							},
 							{
 								"id": "world-instance",
@@ -252,11 +252,20 @@
 							}
 						]
 					},
+					"effects": {
+						"WarpRadial": {
+							"parameters": {
+								"frequency": 12,
+								"amplitude": 0.05,
+								"speed": 2
+							}
+						}
+					},
 					"world": {
 						"x": -89,
 						"y": -167,
 						"width": 3829,
-						"height": 1703,
+						"height": 3997,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -304,7 +313,7 @@
 							},
 							{
 								"id": "effect",
-								"component": "[]"
+								"component": "[{\"key\":\"Pulse\",\"state\":\"[[\\\"intensity\\\",true],[\\\"lighting\\\",true],[\\\"speed\\\",true],[\\\"frequency\\\",true],[\\\"center-x\\\",true],[\\\"center-y\\\",true]]\"}]"
 							},
 							{
 								"id": "world-instance",
@@ -312,11 +321,23 @@
 							}
 						]
 					},
+					"effects": {
+						"Pulse": {
+							"parameters": {
+								"intensity": 1,
+								"lighting": 0.5,
+								"speed": 10,
+								"frequency": 30,
+								"center-x": 0.5,
+								"center-y": 0.5
+							}
+						}
+					},
 					"world": {
 						"x": -150,
 						"y": -80,
 						"width": 3879,
-						"height": 1453,
+						"height": 3750,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -403,8 +424,8 @@
 						]
 					},
 					"world": {
-						"x": 101,
-						"y": 358,
+						"x": 1512,
+						"y": 1184,
 						"width": 250,
 						"height": 250,
 						"originX": 0.5,
@@ -522,9 +543,9 @@
 						"Turret": {
 							"properties": {
 								"range": 400,
-								"rate-of-fire": 2,
+								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 200,
+								"rotate-speed": 800,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -764,8 +785,8 @@
 						]
 					},
 					"world": {
-						"x": 1273,
-						"y": 108,
+						"x": 3126,
+						"y": 176,
 						"width": 97.99999999999999,
 						"height": 94,
 						"originX": 0.5,
@@ -797,9 +818,9 @@
 						"Turret": {
 							"properties": {
 								"range": 300,
-								"rate-of-fire": 2,
+								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 180,
+								"rotate-speed": 800,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -850,8 +871,8 @@
 						]
 					},
 					"world": {
-						"x": 1173.5,
-						"y": 938,
+						"x": 823,
+						"y": 2146,
 						"width": 184,
 						"height": 162,
 						"originX": 0.5,
@@ -882,10 +903,10 @@
 					"behaviors": {
 						"Turret": {
 							"properties": {
-								"range": 300,
-								"rate-of-fire": 2,
+								"range": 500,
+								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 180,
+								"rotate-speed": 800,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -936,8 +957,8 @@
 						]
 					},
 					"world": {
-						"x": 1875,
-						"y": 368,
+						"x": 2493,
+						"y": 2488,
 						"width": 169,
 						"height": 140,
 						"originX": 0.5,
@@ -969,9 +990,9 @@
 						"Turret": {
 							"properties": {
 								"range": 300,
-								"rate-of-fire": 2,
+								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 180,
+								"rotate-speed": 800,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -1055,9 +1076,9 @@
 						"Turret": {
 							"properties": {
 								"range": 300,
-								"rate-of-fire": 2,
+								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 180,
+								"rotate-speed": 800,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -1108,8 +1129,8 @@
 						]
 					},
 					"world": {
-						"x": 3141.5,
-						"y": 401.5,
+						"x": 2645,
+						"y": 3219,
 						"width": 140,
 						"height": 143,
 						"originX": 0.5,
@@ -1179,8 +1200,8 @@
 						]
 					},
 					"world": {
-						"x": 2208,
-						"y": 146,
+						"x": 518,
+						"y": 2884,
 						"width": 107,
 						"height": 138,
 						"originX": 0.5,
@@ -1811,7 +1832,7 @@
 		}
 	],
 	"width": 3500,
-	"height": 1060,
+	"height": 3500,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,

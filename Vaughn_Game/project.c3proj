@@ -152,6 +152,22 @@
 		},
 		{
 			"type": "effect",
+			"id": "warpradial",
+			"name": "Warp radial",
+			"author": "Scirra",
+			"version": "r289",
+			"bundled": false
+		},
+		{
+			"type": "effect",
+			"id": "pulse",
+			"name": "Pulse",
+			"author": "Danguafer/Silexars",
+			"version": "r289",
+			"bundled": false
+		},
+		{
+			"type": "effect",
 			"id": "brightness",
 			"name": "Brightness",
 			"author": "Scirra",
@@ -398,7 +414,7 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https"
 	},
-	"viewportWidth": 800,
+	"viewportWidth": 1000,
 	"viewportHeight": 1000,
 	"firstLayout": "Layout 0"
 }

@@ -239,12 +239,12 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 998490785245950,
+							"sid": 531661297073353,
 							"parameters": {
 								"object-to-create": "Bugs",
 								"layer": "1",
 								"x": "floor(random(50,3450))",
-								"y": "floor(random(50,1010))",
+								"y": "floor(random(50,3450))",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -487,6 +487,35 @@
 						}
 					],
 					"sid": 501509864072760
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 788035039657751,
+							"parameters": {
+								"interval-seconds": "5.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 770994375298574,
+							"parameters": {
+								"object-to-create": "Turret",
+								"layer": "1",
+								"x": "floor(random(50,3450))",
+								"y": "floor(random(50,3450))",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 338270607067841
 				}
 			],
 			"sid": 300977204188999
@@ -1936,6 +1965,22 @@
 							"parameters": {
 								"visibility": "invisible"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dirt",
+							"sid": 535363542154500,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Marble",
+							"sid": 768909417821642,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 390250902065782
@@ -1975,6 +2020,22 @@
 							"id": "set-visible",
 							"objectClass": "Wood",
 							"sid": 728676006137032,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dirt",
+							"sid": 780574813201033,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Marble",
+							"sid": 124779077295473,
 							"parameters": {
 								"visibility": "invisible"
 							}
@@ -2020,9 +2081,141 @@
 							"parameters": {
 								"visibility": "visible"
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dirt",
+							"sid": 845642119062604,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Marble",
+							"sid": 379428753244241,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 625253319749327
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 221115258240169,
+							"parameters": {
+								"variable": "Color",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Grass",
+							"sid": 334831985942625,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Metal",
+							"sid": 443220792056331,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Wood",
+							"sid": 294469465260331,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dirt",
+							"sid": 984047285383961,
+							"parameters": {
+								"visibility": "visible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Marble",
+							"sid": 364706222103103,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 713123576943771
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 622488575875151,
+							"parameters": {
+								"variable": "Color",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "Grass",
+							"sid": 350140727566015,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Metal",
+							"sid": 122219961181036,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Wood",
+							"sid": 344189384899117,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Dirt",
+							"sid": 849977497203676,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "Marble",
+							"sid": 176033163785657,
+							"parameters": {
+								"visibility": "visible"
+							}
+						}
+					],
+					"sid": 872713507049962
 				}
 			],
 			"sid": 354516891219437
@@ -2045,11 +2238,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 899462623851391,
+							"sid": 506694855102157,
 							"parameters": {
 								"variable": "Level",
-								"comparison": 3,
-								"value": "3"
+								"comparison": 0,
+								"value": "1"
 							}
 						}
 					],
@@ -2113,21 +2306,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 352924804275345,
+							"sid": 256809632863329,
 							"parameters": {
 								"variable": "Level",
-								"comparison": 5,
-								"value": "4"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 695980226347720,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "6"
+								"comparison": 0,
+								"value": "2"
 							}
 						}
 					],
@@ -2200,21 +2383,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 156555396702236,
+							"sid": 476494634991277,
 							"parameters": {
 								"variable": "Level",
-								"comparison": 5,
-								"value": "7"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 419411572043000,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "9"
+								"comparison": 0,
+								"value": "3"
 							}
 						}
 					],
@@ -2287,21 +2460,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 103633248539246,
+							"sid": 178838429013968,
 							"parameters": {
 								"variable": "Level",
 								"comparison": 5,
-								"value": "10"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 227534909761782,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "12"
+								"value": "4"
 							}
 						}
 					],
@@ -2354,10 +2517,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 949484102691869,
+							"sid": 923185922869621,
 							"parameters": {
 								"variable": "Color",
-								"value": "0"
+								"value": "3"
 							}
 						}
 					],
@@ -2374,21 +2537,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 606102984193671,
+							"sid": 929250351749558,
 							"parameters": {
 								"variable": "Level",
 								"comparison": 5,
-								"value": "13"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 558475506502087,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "15"
+								"value": "5"
 							}
 						}
 					],
@@ -2441,2553 +2594,14 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 734373520743719,
+							"sid": 694219843021290,
 							"parameters": {
 								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 116453083077552,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "15"
+								"value": "4"
 							}
 						}
 					],
 					"sid": 179476762230345
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 277294037319282
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 280941963755362,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "16"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 695090978839902,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "18"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 452272822018539,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 242735398800000,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "70"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 463510280166940,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.5"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 815504702370867,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "35"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 364973781661887,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1100"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 701895322684529,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 274475343678541,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "6"
-							}
-						}
-					],
-					"sid": 172404209872060
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 398488115595582
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 472193756616633,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "19"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 689093124757937,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "21"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 317421932308266,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 311765428711893,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 233906761383935,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.5"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 730811838644691,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "40"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 105999841803910,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1300"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 516223409237108,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 955221033252342
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 971032143972474
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 779282966727180,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "22"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 285026515362555,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "24"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 760045545943690,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 690203535191816,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 613799915359670,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.5"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 627535682325048,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "40"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 459879882908410,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1300"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 330478041826053,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 144351761145589,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "20"
-							}
-						}
-					],
-					"sid": 508386045106310
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 900327435207361
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 828126474409592,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "25"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 998037335103246,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "27"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 867419219194288,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 310024885376492,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 760146925651497,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 498197320280801,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "40"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 928222531739248,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1500"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 125120178953510,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 658546112254849,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "9"
-							}
-						}
-					],
-					"sid": 213762015516331
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 310308051700692
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 212169693787617,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "28"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 851438679249375,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "30"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 468216865600132,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 676564530322563,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 515366886623659,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 228472769432444,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "40"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 985623143825021,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1500"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 588046044848390,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 105674631682376
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 263949623126126
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 810697706303292,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "31"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 650992988603101,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "33"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 534217245000094,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 298684056920572,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 667451157043092,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 800292036277953,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "40"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 406039308758061,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1500"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 106278407531355,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 434950045059859,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "25"
-							}
-						}
-					],
-					"sid": 120320755064569
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 304801503677722
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 951394998521497,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "34"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 707291298726983,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "36"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 510301436682038,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 924571378166502,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 591403848708554,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 594222976402000,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "40"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 106254785617124,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1500"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 225550452213357,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 626642851663862,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "12"
-							}
-						}
-					],
-					"sid": 429349203664905
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 713872738587012
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 876972914944212,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "37"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 553981898558701,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "39"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 376152949012635,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 328173159661632,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 180360071040009,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 927859724611713,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "40"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 933924726933788,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1500"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 358074587512050,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 126118884868194
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 820024458044897
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 492998917327439,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "40"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 135461707220591,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "42"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 992220419213683,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 398663161061008,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 524345251422892,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 217153001248750,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 537736049040341,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1800"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 787116484923353,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 851802967314003,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "30"
-							}
-						}
-					],
-					"sid": 589335035502009
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 154890385702594
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 782403131449960,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "43"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 495951012319776,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "45"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 360956845340021,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 233568965359498,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 254601614688720,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 884042488737554,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 456946141594056,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1800"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 938701648522574,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 380202429680665,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "15"
-							}
-						}
-					],
-					"sid": 673346517804426
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 982131951354064
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 507277160500590,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "46"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 648549154058979,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "48"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 902151168608260,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 324952229186208,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 608542592864672,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.25"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 102538187325119,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 425644378948819,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "1800"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 522771990711949,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						}
-					],
-					"sid": 798308916186775
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 625012102280969
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 875459511676513,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "49"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 152193383914452,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "51"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 235870903383064,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 633637716328383,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 538677898973341,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 691901040444637,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 884502149450658,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 783237455581209,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 248771986476568,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "35"
-							}
-						}
-					],
-					"sid": 971314931845261
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 245174903499019
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 184604309394868,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "52"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 961519605298363,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "54"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 582804746865845,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 761613701881907,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 246521679771792,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 832907283712357,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 456286737294753,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 838132337453427,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 319567638078443,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "18"
-							}
-						}
-					],
-					"sid": 415350071131844
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 787257428044704
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 610505579430519,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "55"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 901699617895103,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "57"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 431071569781675,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 909641718914724,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 381522432444551,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 484102327340158,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 197918427392331,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 271536024667673,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						}
-					],
-					"sid": 611889977924135
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 372406544618921
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 521783468059396,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "58"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 886185957020444,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "60"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 860418558870375,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 225783247084934,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 525002278868457,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 751553359491041,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 111040644922136,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 666518498021392,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 433991876372734,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "40"
-							}
-						}
-					],
-					"sid": 103202056018106
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 988019578743604
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 910639033504818,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "61"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 428144386620253,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "63"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 578100539816777,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 721227634662518,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 224038848544448,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 340935048549310,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 271143960179535,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 730485629660971,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 737692029977384,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "21"
-							}
-						}
-					],
-					"sid": 467367362796433
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 731885990767206
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 329226493745079,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "64"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 821689379819331,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "66"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 618332062253553,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 789614535169792,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 143338507637279,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 940581784076221,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 704329943676218,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 850696586907180,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						}
-					],
-					"sid": 309209081085238
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 742983590292403
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 121014075902877,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "67"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 529588518046692,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "69"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 645795246755842,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 529988345377654,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 795552321664766,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 450474323425917,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 439662754876714,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 837353389926195,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 175608014448877,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "45"
-							}
-						}
-					],
-					"sid": 190496023757483
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 228718482226697
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 133869032042017,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "70"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 460095456636628,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "72"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 451897037425103,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 534684493691912,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 684086817688985,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 873281780871329,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 909942877441750,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 669670536321803,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 902079811910671,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "24"
-							}
-						}
-					],
-					"sid": 672932870237465
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 474206890581680
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 639021130129706,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "73"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 985000712434230,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "75"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 484430858449759,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 856960467807727,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 813747759037859,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 144911841687947,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 401305874835344,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 370163872019443,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						}
-					],
-					"sid": 991930194012299
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 312359847149882
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 144151147112647,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "76"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 902257155722779,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "78"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 436663921160557,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 350378090109367,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 785017009795937,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 492519461146811,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 449795107298720,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 350513165707456,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 762601516190865,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "50"
-							}
-						}
-					],
-					"sid": 295088526928380
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 242478117095619
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 709670191894458,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "79"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 532819460988927,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "81"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 768621300561303,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 662022776595147,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 288095989872459,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 903650851165122,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 837193849016115,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 761009551328656,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 772704835379065,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "27"
-							}
-						}
-					],
-					"sid": 649076322467946
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 627671183759177
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 643830576131694,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "82"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 172944799502556,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "84"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 662192827699555,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 561651838002918,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 381611201477461,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 962401760799629,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 337460230872878,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 447348078114520,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						}
-					],
-					"sid": 311140579422290
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 358546757695764
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 416122764743806,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "85"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 703465434614888,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "87"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 455876709229454,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 177253611140402,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 804985434569444,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 846049955402914,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 371168104566474,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 343958004413902,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 720777367233360,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "55"
-							}
-						}
-					],
-					"sid": 132498382446178
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 942379678199993
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 731129162572270,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "88"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 380475865871270,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "90"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 767738420970762,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 263644270060491,
-							"parameters": {
-								"variable": "Color",
-								"value": "2"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 893234134235046,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 893946465570898,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 831665913091244,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 113240398477527,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Wood",
-							"sid": 977430821848801,
-							"parameters": {
-								"effect": "\"Water\"",
-								"parameter-index": "3",
-								"value": "30"
-							}
-						}
-					],
-					"sid": 122370056299012
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 116675007931596
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 885964891183351,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "91"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 123471796425534,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "95"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 774242349895592,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 171149950045002,
-							"parameters": {
-								"variable": "Color",
-								"value": "0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 652282550382818,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 817504506207937,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 478384357213397,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 628124150629505,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						}
-					],
-					"sid": 475189508904494
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 288188432461002
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 741267852113890,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 5,
-								"value": "96"
-							}
-						},
-						{
-							"id": "compare-eventvar",
-							"objectClass": "System",
-							"sid": 628103459997508,
-							"parameters": {
-								"variable": "Level",
-								"comparison": 3,
-								"value": "99"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-eventvar",
-							"objectClass": "System",
-							"sid": 670576202049497,
-							"parameters": {
-								"variable": "BugsGotten",
-								"value": "false"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 736695219099163,
-							"parameters": {
-								"variable": "Color",
-								"value": "1"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 389428674795601,
-							"parameters": {
-								"variable": "TimeLimit",
-								"value": "50"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 191779419882092,
-							"parameters": {
-								"variable": "SpawnRate",
-								"value": "0.10"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 222991382268214,
-							"parameters": {
-								"variable": "BugsNeeded",
-								"value": "60"
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "Lizard",
-							"sid": 250422943478723,
-							"parameters": {
-								"instance-variable": "Speed",
-								"value": "2100"
-							}
-						},
-						{
-							"id": "set-effect-parameter",
-							"objectClass": "Metal",
-							"sid": 671413108695822,
-							"parameters": {
-								"effect": "\"Swirl\"",
-								"parameter-index": "0",
-								"value": "60"
-							}
-						}
-					],
-					"sid": 693436696956391
 				},
 				{
 					"eventType": "block",
@@ -5000,11 +2614,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 853159822053442,
+							"sid": 440760938068056,
 							"parameters": {
 								"variable": "Level",
 								"comparison": 5,
-								"value": "100"
+								"value": "6"
 							}
 						}
 					],
