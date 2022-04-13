@@ -760,6 +760,17 @@
 							}
 						},
 						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 783401171603115,
+							"parameters": {
+								"audio-file": "Bomb-Explosion-Big-www.fesliyanstudios.com_1",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
 							"id": "set-enabled",
 							"objectClass": "Lizard",
 							"sid": 269394381388822,
@@ -1265,6 +1276,17 @@
 								"duration": "5.0",
 								"type": "once",
 								"tag": "\"Shoot\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 631111203439702,
+							"parameters": {
+								"audio-file": "12-Gauge-Pump-Action-Shotgun-Close-Gunshot-B-www.fesliyanstudios.com",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
 							}
 						}
 					],
