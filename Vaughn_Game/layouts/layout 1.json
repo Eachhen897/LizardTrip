@@ -451,7 +451,7 @@
 					},
 					"uid": 3,
 					"instanceVariables": {
-						"Health": 3,
+						"Health": 10,
 						"Bugs": 0,
 						"Speed": 300,
 						"ShootOn": false
@@ -537,7 +537,7 @@
 					},
 					"uid": 4,
 					"instanceVariables": {
-						"FireRate": 2
+						"FireRate": 1
 					},
 					"behaviors": {
 						"Turret": {
@@ -545,7 +545,7 @@
 								"range": 400,
 								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 800,
+								"rotate-speed": 900,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -812,7 +812,7 @@
 					},
 					"uid": 13,
 					"instanceVariables": {
-						"FireRate": 2
+						"FireRate": 1
 					},
 					"behaviors": {
 						"Turret": {
@@ -820,7 +820,7 @@
 								"range": 300,
 								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 800,
+								"rotate-speed": 900,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -898,7 +898,7 @@
 					},
 					"uid": 14,
 					"instanceVariables": {
-						"FireRate": 2
+						"FireRate": 1
 					},
 					"behaviors": {
 						"Turret": {
@@ -906,7 +906,7 @@
 								"range": 500,
 								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 800,
+								"rotate-speed": 900,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -984,7 +984,7 @@
 					},
 					"uid": 15,
 					"instanceVariables": {
-						"FireRate": 2
+						"FireRate": 1
 					},
 					"behaviors": {
 						"Turret": {
@@ -992,7 +992,7 @@
 								"range": 300,
 								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 800,
+								"rotate-speed": 900,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,
@@ -1070,7 +1070,7 @@
 					},
 					"uid": 16,
 					"instanceVariables": {
-						"FireRate": 2
+						"FireRate": 1
 					},
 					"behaviors": {
 						"Turret": {
@@ -1078,7 +1078,7 @@
 								"range": 300,
 								"rate-of-fire": 1,
 								"rotate": true,
-								"rotate-speed": 800,
+								"rotate-speed": 900,
 								"target-mode": "first-in-range",
 								"predictive-aim": false,
 								"projectile-speed": 500,

@@ -95,7 +95,7 @@
 			"eventType": "variable",
 			"name": "Health",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "10",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -437,11 +437,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 530062654572447,
+							"sid": 715597765388308,
 							"parameters": {
 								"variable": "Level",
 								"comparison": 3,
-								"value": "99"
+								"value": "5"
 							}
 						}
 					],
@@ -468,11 +468,11 @@
 						{
 							"id": "compare-eventvar",
 							"objectClass": "System",
-							"sid": 135680395902316,
+							"sid": 105188120562754,
 							"parameters": {
 								"variable": "Level",
 								"comparison": 5,
-								"value": "100"
+								"value": "6"
 							}
 						}
 					],
@@ -1085,6 +1085,17 @@
 								"volume": "0",
 								"tag-optional": "\"\""
 							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "Lizard",
+							"sid": 550582930246609,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "5.0",
+								"type": "once",
+								"tag": "\"Speed\""
+							}
 						}
 					],
 					"sid": 419171243992451
@@ -1277,17 +1288,6 @@
 								"type": "once",
 								"tag": "\"Shoot\""
 							}
-						},
-						{
-							"id": "play",
-							"objectClass": "Audio",
-							"sid": 631111203439702,
-							"parameters": {
-								"audio-file": "12-Gauge-Pump-Action-Shotgun-Close-Gunshot-B-www.fesliyanstudios.com",
-								"loop": "not-looping",
-								"volume": "0",
-								"tag-optional": "\"\""
-							}
 						}
 					],
 					"sid": 406745326548390
@@ -1323,6 +1323,17 @@
 								"image-point": "0",
 								"create-hierarchy": false
 							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 628202082789552,
+							"parameters": {
+								"audio-file": "12-Gauge-Pump-Action-Shotgun-Close-Gunshot-B-www.fesliyanstudios.com",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
 						}
 					],
 					"sid": 699285793466275
@@ -1352,6 +1363,57 @@
 						}
 					],
 					"sid": 373985906298511
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "Lizard",
+							"sid": 214730708687119,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"Speed\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-speed",
+							"objectClass": "Lizard",
+							"sid": 577483043471465,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"speed": "800"
+							}
+						}
+					],
+					"sid": 927962213140242
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "Lizard",
+							"sid": 852042457215022,
+							"parameters": {
+								"object": "Black_Ant"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-instvar",
+							"objectClass": "Lizard",
+							"sid": 743912457133357,
+							"parameters": {
+								"instance-variable": "Health",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 627260143442708
 				}
 			],
 			"sid": 592564132183825
@@ -1897,6 +1959,15 @@
 							"parameters": {
 								"text": "\"Round Clear!\""
 							}
+						},
+						{
+							"id": "set-enabled",
+							"objectClass": "Lizard",
+							"sid": 489507830151082,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"state": "disabled"
+							}
 						}
 					],
 					"sid": 931986617483121
@@ -1923,13 +1994,10 @@
 							}
 						},
 						{
-							"id": "subtract-from-instvar",
+							"id": "unacquire-target",
 							"objectClass": "Turret",
-							"sid": 492907648892487,
-							"parameters": {
-								"instance-variable": "FireRate",
-								"value": "0.5"
-							}
+							"sid": 361559043755418,
+							"behaviorType": "Turret"
 						},
 						{
 							"id": "restart-layout",

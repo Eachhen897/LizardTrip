@@ -69,6 +69,15 @@
 					"parameters": {
 						"layout": "Layout 0"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 379218493703454,
+					"parameters": {
+						"variable": "Health",
+						"value": "3"
+					}
 				}
 			],
 			"sid": 679977711185097
