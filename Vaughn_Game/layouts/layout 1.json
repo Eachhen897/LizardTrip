@@ -112,8 +112,8 @@
 					"effects": {
 						"Swirl": {
 							"parameters": {
-								"radius": 0.5,
-								"angle": 0.5
+								"radius": 0.35,
+								"angle": 0.35
 							}
 						}
 					},
