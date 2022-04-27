@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"version": "r291",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -206,7 +214,9 @@
 			"PlayerBullet",
 			"Text9",
 			"Marble",
-			"Dirt"
+			"Dirt",
+			"Grave",
+			"Blood"
 		],
 		"subfolders": []
 	},

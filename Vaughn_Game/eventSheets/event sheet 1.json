@@ -582,12 +582,23 @@
 						{
 							"id": "shake",
 							"objectClass": "Lizard",
-							"sid": 736788574090261,
+							"sid": 499184801361540,
 							"behaviorType": "ScrollTo",
 							"parameters": {
-								"magnitude": "20",
-								"duration": "0.4",
+								"magnitude": "50",
+								"duration": "0.5",
 								"mode": "reducing-magnitude"
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "Lizard",
+							"sid": 440842482330354,
+							"parameters": {
+								"object": "Blood",
+								"layer": "1",
+								"image-point": "0",
+								"create-hierarchy": false
 							}
 						},
 						{
