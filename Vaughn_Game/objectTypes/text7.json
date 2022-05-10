@@ -5,5 +5,14 @@
 	"isGlobal": false,
 	"instanceVariables": [],
 	"behaviorTypes": [],
-	"effectTypes": []
+	"effectTypes": [
+		{
+			"effectId": "water",
+			"name": "Water"
+		},
+		{
+			"effectId": "colorblend",
+			"name": "Color"
+		}
+	]
 }

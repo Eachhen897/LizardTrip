@@ -494,7 +494,7 @@
 						{
 							"id": "every-x-seconds",
 							"objectClass": "System",
-							"sid": 788035039657751,
+							"sid": 320629039531627,
 							"parameters": {
 								"interval-seconds": "5.0"
 							}
@@ -516,6 +516,27 @@
 						}
 					],
 					"sid": 338270607067841
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 489727499105602,
+							"parameters": {
+								"interval-seconds": "20.0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Turret",
+							"sid": 500103654333358
+						}
+					],
+					"sid": 278930782607515
 				}
 			],
 			"sid": 300977204188999
@@ -1182,8 +1203,8 @@
 						},
 						{
 							"id": "set-collisions-enabled",
-							"objectClass": "Lizard",
-							"sid": 599374310893280,
+							"objectClass": "Bullet",
+							"sid": 615042086545194,
 							"parameters": {
 								"collisions": "disabled"
 							}
@@ -1235,8 +1256,8 @@
 						},
 						{
 							"id": "set-collisions-enabled",
-							"objectClass": "Lizard",
-							"sid": 400823000630820,
+							"objectClass": "Bullet",
+							"sid": 327901997674566,
 							"parameters": {
 								"collisions": "enabled"
 							}
@@ -1979,6 +2000,12 @@
 							"parameters": {
 								"state": "disabled"
 							}
+						},
+						{
+							"id": "unacquire-target",
+							"objectClass": "Turret",
+							"sid": 761313410397522,
+							"behaviorType": "Turret"
 						}
 					],
 					"sid": 931986617483121
@@ -2003,12 +2030,6 @@
 							"parameters": {
 								"seconds": "4.0"
 							}
-						},
-						{
-							"id": "unacquire-target",
-							"objectClass": "Turret",
-							"sid": 361559043755418,
-							"behaviorType": "Turret"
 						},
 						{
 							"id": "restart-layout",
